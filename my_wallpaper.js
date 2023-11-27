@@ -17,9 +17,10 @@ let brown = [63, 45, 33,100];
 let beige = [255,255,204];
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -33,8 +34,8 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  let sumx =2;
-  let sumy =2;
+  let sumx =1;
+  let sumy =1;
   
   strokeWeight(0.8);
   
@@ -52,9 +53,27 @@ function my_tile(x, y, sizex, sizey){
   line(x + sizex/2,  y + sizey/4, x + sizex, y + sizey/4 );
   line(x , y+ sizey/4*3, x + sizex/2, y + sizey/4*3);
   line(x + sizex/10*6, y + sizey/2, x + sizex, y + sizey/2);
-  //draw the 5 circles
-  noFill();
   
+  fill(beige);
+  rect(x,y,sizex/2,sizey/4);
+  fill(yellow);
+  for (let i=5;i>0;i--){
+    noStroke();
+    rect(x+sizex/2+sizex/10, y+sizey/4+sizey/20*i, sizex/2-sizex/10,sizey/4-sizey/20*i);
+    
+  }
+ for (let i=0;i<5;i++){
+    stroke(1);
+    line(x+sizex/2+sizex/10, y+sizey/4+sizey/20*i, x + sizex, y + sizey/4+sizey/20*i);
+    
+  }
+
+
+
+
+
+
+
   fill(red);
   arc(x + sizex/4, y + sizey, sizex/2, sizey/2,180,0);
   arc(x + sizex/4, y , sizex/2, sizey/2,0,180);
@@ -72,6 +91,12 @@ function my_tile(x, y, sizex, sizey){
     arc(x +sizex/2, y + sizey/2, sizex/10*i, sizey, 180, 270);
     arc(x +sizex/2, y + sizey/2, sizex/10*i, sizey, 90, 180);
   }
+
+
+  
+
+
+
   fill(beige);
   rect (x, y +sizey/2, sizex/2, sizey/4);
 
@@ -143,7 +168,9 @@ function my_tile(x, y, sizex, sizey){
   arc(x +sizex/2, y+sizey, sizex/20, sizey/20, 180,0);
   arc(x +sizex/2, y-0.5, sizex/20, sizey/20, 0,180);
   
-
+//weaving?
+  weaving(x,y,sizex,sizey);
+  
 
 }
 
@@ -155,4 +182,12 @@ function smallRect(x,y,sizex,sizey){
   rect(x + sizex/8, y + sizey/8, sizex/4*3 , sizey/4*3);
   rect(x + sizex/4, y + sizey/4, sizex/2 , sizey/2);
  
+}
+function weaving(x,y, sizex, sizey){
+  fill(brown);
+  rect(x+sizex/20*19,y+sizey/20*3, sizex/20,sizey/20);
+  rect(x+sizex/20*17,y+sizey/20*3, sizex/20,sizey/20);
+  rect(x+sizex/20*15,y+sizey/20*3, sizex/20,sizey/20);
+  rect(x+sizex/20*16,y+sizey/20*4, sizex/20,sizey/20);
+  rect(x+sizex/20*18,y+sizey/20*4, sizex/20,sizey/20);
 }
