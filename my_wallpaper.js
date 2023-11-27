@@ -17,7 +17,7 @@ let brown = [63, 45, 33,100];
 let beige = [255,255,204];
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
   
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
@@ -34,28 +34,13 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  let sumx =1;
-  let sumy =1;
-  
-  strokeWeight(0.8);
-  
-  for (let i = 0; i < sumx; i++) {
-    for (let j = 0; j < sumy; j++) {
-        my_tile(i*(rect_width/sumx),  j*(rect_height/sumy), rect_width/sumx, rect_height/sumy);
-    }
-  }
-
+  strokeWeight(1);
+  my_tile(0,0,rect_width,rect_height);
 }
 
 function my_tile(x, y, sizex, sizey){
-  //Line Structure 
-  line(x + sizex/2, y , x + sizex/2, y + sizey);
-  line(x + sizex/2,  y + sizey/4, x + sizex, y + sizey/4 );
-  line(x , y+ sizey/4*3, x + sizex/2, y + sizey/4*3);
   line(x + sizex/10*6, y + sizey/2, x + sizex, y + sizey/2);
   
-  fill(beige);
-  rect(x,y,sizex/2,sizey/4);
   fill(yellow);
   for (let i=5;i>0;i--){
     noStroke();
@@ -68,16 +53,13 @@ function my_tile(x, y, sizex, sizey){
     
   }
 
-
-
-
-
-
-
   fill(red);
-  arc(x + sizex/4, y + sizey, sizex/2, sizey/2,180,0);
-  arc(x + sizex/4, y , sizex/2, sizey/2,0,180);
+  arc(x + sizex/4, y + sizey, sizex/3, sizey/3,180,0);
+  arc(x + sizex/4, y , sizex/3, sizey/3,0,180);
   arc(x + sizex, y + sizey, sizex, sizey, 180, 270);
+
+
+
   fill(lightOrange);
   arc(x + sizex/2, y + sizey/2, sizex , sizey,90,270); 
 
