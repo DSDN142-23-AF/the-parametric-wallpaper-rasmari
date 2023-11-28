@@ -1,54 +1,200 @@
-You will need to fill out this file for hand in. 
-
-The bellow is just an example, feel free to disregard this documents contents.
-
-
-Your final settings.txt will look something like this when you are finished:
 
 /////////////////////////////////
-
 Wallpaper 1:
 
-//your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+//Parameters
+let yellowLineDensity = 10; 
+let bigCircleY = 0;
+let bigCircleX = 0;
+let bigCircleSize = 0;
+let colorOffset = 0; 
+let smallCubeSize = 0; 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
   pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.show_guide(false);
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset  = 50;
 }
 
 /////////////////////////////////
+Wallpaper 2: 
 
-Wallpaper 2:
-
-//your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+//Parameters
+let yellowLineDensity = 6; 
+let bigCircleY = 15;
+let bigCircleX = 50;
+let bigCircleSize = -10;
+let colorOffset = 10; 
+let smallCubeSize = 4; 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
   pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.show_guide(false);
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
 }
+
+/////////////////////////////////
+Wallpaper 3:
+
+//Parameters
+let yellowLineDensity = 6; 
+let bigCircleY = 20;
+let bigCircleX = -3;
+let bigCircleSize = 30;
+let colorOffset = 6; 
+let smallCubeSize = 15; 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false);
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
+Wallpaper 4:
+
+//Parameters
+let yellowLineDensity = 14; 
+let bigCircleY = -20;
+let bigCircleX = 0;
+let bigCircleSize = -60;
+let colorOffset = 9; 
+let smallCubeSize = 1; 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false);
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
+Wallpaper 5:
+
+//Parameters
+let yellowLineDensity = 10; 
+let bigCircleY = 70;
+let bigCircleX = 39;
+let bigCircleSize = 20;
+let colorOffset = 4; 
+let smallCubeSize = 10; 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false);
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
+Wallpaper 6:
+
+//Parameters
+let yellowLineDensity = 0; 
+let bigCircleY = 30;
+let bigCircleX = 10;
+let bigCircleSize = 5;
+let colorOffset = 90; 
+let smallCubeSize = -10; 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false);
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
+Wallpaper 7:
+
+//Parameters
+let yellowLineDensity = 14; 
+let bigCircleY = 35;
+let bigCircleX = 10;
+let bigCircleSize = 25;
+let colorOffset = 0; 
+let smallCubeSize = 14; 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false);
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
+Wallpaper 8:
+
+//Parameters
+let yellowLineDensity = 4; 
+let bigCircleY = 10;
+let bigCircleX =-40;
+let bigCircleSize = -35;
+let colorOffset = 0; 
+let smallCubeSize = 9; 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false);
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
+Wallpaper 9:
+
+//Parameters
+let yellowLineDensity = 4; 
+let bigCircleY = -10;
+let bigCircleX = 0;
+let bigCircleSize = -20;
+let colorOffset = 100; 
+let smallCubeSize = 13; 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false);
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
