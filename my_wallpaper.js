@@ -18,16 +18,16 @@ let beige = [255,255,204];
 let colours = [darkOrange, lightOrange, lightOrangeFull, blue, purple, green, red, yellow, pink, brown, beige];
 
 //My Parameters to change the wallpaper
-let yellowLineDensity = 14; //must be even number!!
-let bigCircleY = 35;
-let bigCircleX = 10;
-let bigCircleSize = 25;
-let colorOffset = 10; //cannot be negative
-let smallCubeSize = 14; // smaller than 17
+let yellowLineDensity = 10; //must be even number!!
+let bigCircleY = 0;
+let bigCircleX = 0;
+let bigCircleSize = 0;
+let colorOffset = 0; //cannot be negative
+let smallCubeSize = 0; // smaller than 17
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GLIDE_WALLPAPER);
-  pWallpaper.resolution(A3);
+  pWallpaper.resolution( NINE_PORTRAIT);
   pWallpaper.show_guide(false);
 
   //Grid settings
@@ -35,19 +35,23 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset  = 50;
 }
-
+//my_tile(0,0,rect_width,rect_height);
 function wallpaper_background() {
   //background is beige
   shiftColors(colours, colorOffset);
   background( 255, 255, 204 );
-  
-  
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   strokeWeight(1);
-  
-  my_tile(0,0,rect_width,rect_height);
+
+  let sumx =1;
+  let sumy =1;
+  for (let m =0; m<sumx; m++){
+    for (let n =0; n<sumy; n++){
+      my_tile(0 + m*(rect_width/sumx), 0 + n*(rect_height/sumy), rect_width/sumx, rect_height/sumy);
+    }
+  }
 }
 
 function my_tile(x, y, sizex, sizey){
