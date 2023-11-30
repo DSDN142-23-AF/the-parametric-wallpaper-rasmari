@@ -35,23 +35,16 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset  = 50;
 }
-//my_tile(0,0,rect_width,rect_height);
+
 function wallpaper_background() {
-  //background is beige
   shiftColors(colours, colorOffset);
+  //background is beige
   background( 255, 255, 204 );
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   strokeWeight(1);
-
-  let sumx =1;
-  let sumy =1;
-  for (let m =0; m<sumx; m++){
-    for (let n =0; n<sumy; n++){
-      my_tile(0 + m*(rect_width/sumx), 0 + n*(rect_height/sumy), rect_width/sumx, rect_height/sumy);
-    }
-  }
+  my_tile(0,0,rect_width,rect_height);
 }
 
 function my_tile(x, y, sizex, sizey){
@@ -207,10 +200,9 @@ function smallRect(x,y,sizex,sizey){
 function shiftColors(colors, colourOffset) {
   for (let i=0; i<colourOffset; i++){
     for (let j=0; j<colors.length; j++){
-      colors[j].push(colors[j].shift());
+      colors[j].push(colors[j].shift()); //AI GENERATIONED LINE
     }
   }
-  
 }
 
 
